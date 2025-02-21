@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Return Invoice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/343741ebda.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col items-center gap-[50px] py-[20px] bg-gray-200">
+    <div class="bg-white p-[20px] flex flex-col gap-[20px] rounded-[5px] shadow-md shadow-gray-400 w-[800px] items-center">
+        <h1 class="font-semibold text-[24px]">Sale Return Invoice</h1>
+        <form action="" class="flex justify-center flex-wrap gap-[30px] items-center border-b-[2px] pb-[20px] border-black">
+            <div class="w-[300px]">
+                <label for="Bill No:">Bill No:</label><br>
+                <input type="number" placeholder="Enter Value" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+            </div>
+
+            <div class="w-[350px]">
+                <label for="Customer">Customer</label><br>
+                <div class="flex items-center justify-between">
+                    <input type="text" placeholder="Enter Value" class="border-gray-400 border-[1px] px-[5px] w-[100px] h-[35px] mt-[5px] rounded-[5px]" >
+                    <select name="Customer" class="border-gray-400 border-[1px] px-[5px] w-[220px] h-[35px] mt-[5px] rounded-[5px]">
+                        <option value="Customer" selected disabled>Customer</option>
+                        <option value="Customer 1">Customer 1</option>
+                        <option value="Customer 2">Customer 2</option>
+                        <option value="Customer 3">Customer 3</option>
+                    </select>
+                    <button class="bg-gray-300 font-bold rounded-[10px] px-[5px] text-[24px] flex justify-center items-center" onclick="openDialog()">+</button>
+                </div>
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Transport">Transport</label><br>
+                <select name="Transport" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]">
+                    <option value="Transport" selected disabled>Transport</option>
+                    <option value="Transport 1">Transport 1</option>
+                    <option value="Transport 2">Transport 2</option>
+                    <option value="Transport 3">Transport 3</option>
+                </select>
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Previous Bill">Previous Bill</label><br>
+                <select name="Previous Bill" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]">
+                    <option value="Previous Bill" selected disabled>Previous Bill</option>
+                    <option value="Previous Bill 1">Previous Bill 1</option>
+                    <option value="Previous Bill 2">Previous Bill 2</option>
+                    <option value="Previous Bill 3">Previous Bill 3</option>
+                </select>
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Warehouse">Warehouse</label><br>
+                <select name="Warehouse" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]">
+                    <option value="Warehouse" selected disabled>Warehouse</option>
+                    <option value="Warehouse 1">Warehouse 1</option>
+                    <option value="Warehouse 2">Warehouse 2</option>
+                    <option value="Warehouse 3">Warehouse 3</option>
+                </select>
+            </div>
+
+
+            
+
+            <div class="w-[300px]">
+                <label for="Address">Address</label><br>
+                <input type="text" placeholder="Enter Address" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Cell No">Cell No</label><br>
+                <input type="number" placeholder="Enter Value" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Date">Date</label><br>
+                <input type="date" placeholder="Enter Value" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Sale Man">Sale Man</label><br>
+                <select name="Sale Man" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]">
+                    <option value="Sale Man" selected disabled>Sale Man</option>
+                    <option value="Sale Man 1">Sale Man 1</option>
+                    <option value="Sale Man 2">Sale Man 2</option>
+                    <option value="Sale Man 3">Sale Man 3</option>
+                </select>
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Zone">Zone</label><br>
+                <select name="Zone" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]">
+                    <option value="Zone" selected disabled>Zone</option>
+                    <option value="Zone 1">Zone 1</option>
+                    <option value="Zone 2">Zone 2</option>
+                    <option value="Zone 3">Zone 3</option>
+                </select>
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Area">Area</label><br>
+                <select name="Area" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]">
+                    <option value="Area" selected disabled>Area</option>
+                    <option value="Area 1">Area 1</option>
+                    <option value="Area 2">Area 2</option>
+                    <option value="Area 3">Area 3</option>
+                </select>
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Remarks">Remarks</label><br>
+                <textarea name="remarks" id="remarks" placeholder="Enter Remarks" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]"></textarea>
+            </div>
+        </form>
+
+        <h1 class="font-semibold text-[24px] ">Payment Section</h1>
+        <form action="" class="flex justify-center flex-wrap gap-[30px] items-center">
+            <div class="w-[300px]">
+                <label for="Cash Paid">Total Bill</label><br>
+                <input type="number" placeholder="Enter Value" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+            </div>
+
+            <div class="w-[300px]">
+                <label for="%">%</label><br>
+                <input type="number" placeholder="0.00" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Discount">Discount</label><br>
+                <input type="number" placeholder="Enter Value" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Discount">Discount</label><br>
+                <input type="number" placeholder="Enter Value" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Cash Paid">Cash Paid</label><br>
+                <input type="number" placeholder="Enter Value" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Catage">Catage</label><br>
+                <input type="text" placeholder="Enter Value" class="border-gray-400 border-[1px] px-[5px] w-[100px] h-[35px] mt-[5px] rounded-[5px]" >
+                <select name="Catage" class="border-gray-400 border-[1px] px-[5px] w-[195px] h-[35px] mt-[5px] rounded-[5px]">
+                    <option value="Catage" selected disabled>Catage</option>
+                    <option value="Catage 1">Catage 1</option>
+                    <option value="Catage 2">Catage 2</option>
+                    <option value="Catage 3">Catage 3</option>
+                </select>
+            </div>
+
+            <div class="w-[300px]">
+                <label for="Net Amount">Net Amount</label><br>
+                <input type="number" placeholder="Enter Value" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+            </div>
+            
+        </form>
+    </div>
+
+    <div class="overflow-x-auto w-[1300px]">
+        <table class="min-w-full w-full rounded-md">
+            <thead>
+                <tr class="bg-white rounded-md">
+                    <th id="idHeader" class="px-4 py-2 border-b">S/No</th>
+                    <th id="dateHeader" class="px-4 py-2 border-b">Description</th>
+                    <th id="nameHeader" class="px-4 py-2 border-b">Code</th>
+                    <th id="addressHeader" class="px-4 py-2 border-b">Item Name</th>
+                    <th id="purchaserHeader" class="px-4 py-2 border-b">Unit</th>
+                    <th id="cellHeader" class="px-4 py-2 border-b">Packing</th>
+                    <th id="saleHeader" class="px-4 py-2 border-b">Ctn</th>
+                    <th id="actionsHeader" class="px-4 py-2 border-b">Doz</th>
+                    <th id="actionsHeader" class="px-4 py-2 border-b">Pcs</th>
+                    <th id="actionsHeader" class="px-4 py-2 border-b">Fu</th>
+                    <th id="actionsHeader" class="px-4 py-2 border-b">T.P</th>
+                    <th id="actionsHeader" class="px-4 py-2 border-b">Disc %</th>
+                    <th id="actionsHeader" class="px-4 py-2 border-b">Distributor Discount</th>
+                    <th id="actionsHeader" class="px-4 py-2 border-b">Discount Rs</th>
+                    <th id="actionsHeader" class="px-4 py-2 border-b">Net Value</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-600">
+                <tr>
+                    <td id="serialNumber" class="px-4 py-2 border-b text-center">
+                        <input type="number" class="border border-black rounded-md px-2 w-[5em]">
+                    </td>
+                    <td id="description" class="px-4 py-2 border-b">
+                        <input id="" class="mt-1 w-[15em] rounded-md p-2 resize-none border border-black">
+                        </input>
+
+                    </td>
+                    <td id="code" class="px-4 py-2 border-b text-center">
+                        <input type="number" class="border border-black rounded-md px-2 w-[5em]"
+                            placeholder="code">
+                    </td>
+                    <td id="itemName" class="px-4 py-2 border-b text-center">
+                        <input type="text" placeholder="itemName"
+                            class="border border-black rounded-md px-2 w-[250px]">
+                    </td>
+                    <td id="unit" class="px-4 py-2 border-b text-center">
+                        <input type="text" placeholder="Unit"
+                            class="border border-black rounded-md px-2 w-[5em]">
+                    </td>
+                    <td id="packing" class="px-4 py-2 border-b text-center">
+                        <input type="number" placeholder="Packing"
+                            class="border border-black rounded-md px-2 w-[7em]">
+                    </td>
+                    <td id="ctn" class="px-4 py-2 border-b text-center">
+                        <input type="number" placeholder="Ctn"
+                            class="border border-black rounded-md px-2 w-[5em]">
+                    </td>
+                    <td id="doz" class="px-4 py-2 border-b text-center text-black">
+                        <input type="number" placeholder="Doz"
+                            class="border border-black rounded-md px-2 w-[5em]">
+                    </td>
+                    <td id="pcs" class="px-4 py-2 border-b text-center text-black">
+                        <input type="number" placeholder="Pcs"
+                            class="border border-black rounded-md px-2 w-[5em]">
+                    </td>
+                    <td id="fu" class="px-4 py-2 border-b text-center text-black">
+                        <input type="number" placeholder="Fu"
+                            class="border border-black rounded-md px-2 w-[5em]">
+                    </td>
+                    <td id="tp" class="px-4 py-2 border-b text-center text-black">
+                        <input type="number" placeholder="T.P"
+                            class="border border-black rounded-md px-2 w-[5em]">
+                    </td>
+                    <td id="fu" class="px-4 py-2 border-b text-center text-black">
+                        <input type="number" placeholder="Disc%"
+                            class="border border-black rounded-md px-2 w-[5em]">
+                    </td>
+                    <td id="distributor discount" class="px-4 py-2 border-b text-center text-black">
+                        <input type="number" placeholder="Distributor Discount"
+                            class="border border-black rounded-md px-2 w-[8em]">
+                    </td>
+                    <td id="discountRs" class="px-4 py-2 border-b text-center text-black">
+                        <input type="number" placeholder="discount rs"
+                            class="border border-black rounded-md px-2 w-[5em]">
+                    </td>
+                    <td id="netValue" class="px-4 py-2 border-b text-center text-black">
+                        <input type="number" placeholder="net value"
+                            class="border border-black rounded-md px-2 w-[7em]">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>
