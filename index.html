@@ -167,12 +167,16 @@
             </div>
             
         </form>
+
+        <button type="submit" class="bg-blue-500 px-[15px] py-[10px] rounded-[10px] float-right mb-[20px] font-semibold text-white"><i class="fa-solid fa-floppy-disk mr-[5px]"></i> Save</button>
     </div>
 
     <div class="overflow-x-auto w-[1300px]">
         <table class="min-w-full w-full rounded-md">
             <thead>
                 <tr class="bg-white rounded-md">
+                    <th id="BarCode" class="px-4 py-2 border-b">Bar Code</th>
+                    <th id="QrCode" class="px-4 py-2 border-b">Qr Code</th>
                     <th id="idHeader" class="px-4 py-2 border-b">S/No</th>
                     <th id="dateHeader" class="px-4 py-2 border-b">Description</th>
                     <th id="nameHeader" class="px-4 py-2 border-b">Code</th>
@@ -188,10 +192,21 @@
                     <th id="actionsHeader" class="px-4 py-2 border-b">Distributor Discount</th>
                     <th id="actionsHeader" class="px-4 py-2 border-b">Discount Rs</th>
                     <th id="actionsHeader" class="px-4 py-2 border-b">Net Value</th>
+                    <th id="Actions" class="px-4 py-2 border-b">Actions</th>
                 </tr>
             </thead>
             <tbody class="text-gray-600">
                 <tr>
+                    <td id="barcode" class="px-4 py-2 border-b">
+                        <input id="" class="mt-1 w-[15em] rounded-md p-2 resize-none border border-black">
+                        </input>
+
+                    </td>
+                    <td id="qrcode" class="px-4 py-2 border-b">
+                        <input id="" class="mt-1 w-[15em] rounded-md p-2 resize-none border border-black">
+                        </input>
+
+                    </td>
                     <td id="serialNumber" class="px-4 py-2 border-b text-center">
                         <input type="number" class="border border-black rounded-md px-2 w-[5em]">
                     </td>
@@ -201,12 +216,18 @@
 
                     </td>
                     <td id="code" class="px-4 py-2 border-b text-center">
-                        <input type="number" class="border border-black rounded-md px-2 w-[5em]"
-                            placeholder="code">
+                        <select name="Code" id="Code" class="border border-black rounded-md px-2 w-[5em]">
+                            <option value="Code 1">Code 1</option>
+                            <option value="Code 2">Code 2</option>
+                            <option value="Code 3">Code 3</option>
+                        </select>
                     </td>
                     <td id="itemName" class="px-4 py-2 border-b text-center">
-                        <input type="text" placeholder="itemName"
-                            class="border border-black rounded-md px-2 w-[250px]">
+                        <select name="itemName" id="itemName" class="border border-black rounded-md px-2 w-[250px]">
+                            <option value="Item 1">Item 1</option>
+                            <option value="Item 2">Item 2</option>
+                            <option value="Item 3">Item 3</option>
+                        </select>
                     </td>
                     <td id="unit" class="px-4 py-2 border-b text-center">
                         <input type="text" placeholder="Unit"
@@ -251,6 +272,11 @@
                     <td id="netValue" class="px-4 py-2 border-b text-center text-black">
                         <input type="number" placeholder="net value"
                             class="border border-black rounded-md px-2 w-[7em]">
+                    </td>
+                    <td id="Actions" class="flex justify-center items-center gap-[10px] px-4 py-2 border-b text-center text-black">
+                        <button class="bg-blue-400 text-white px-[5px] "><i class="fa-solid fa-eye"></i></button>
+                        <button class="bg-blue-600 text-white px-[5px] "><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button onclick="deletTable()" class="bg-red-600 text-white px-[5px] "><i class="fa-solid fa-trash"></i></button>
                     </td>
                 </tr>
             </tbody>
